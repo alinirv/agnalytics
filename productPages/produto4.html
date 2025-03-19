@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agnalytics Car Shop</title>
+  <!-- dlEvents script-->
+  <script src="/scripts/dlEvents.js"></script>
+  <!-- End dlEvents script-->
+  <script src="/scripts/gtmInset.js"></script>
+  <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body onload="dlEvent({event: events.viewProduct, itemProperties: carModels.impreza})">
+  <!--MENU-->
+  <div class="menu">
+    <div class="logo">
+      <img src="/assets/logo.png" alt="Logo">
+      <a href="/index.html">
+        <span>Agnalytics Car Shop</span>
+      </a>
+    </div>
+    <div>
+      <a href="/categoryPages/compacto.html">Compacto</a>
+      <a href="/categoryPages/esportivo.html">Esportivo</a>
+      <a href="/categoryPages/sedan.html">Sedan</a>
+      <a href="/cart.html" >Carrinho</a>
+    </div>
+    <div class="input-container">
+      <input id="gtmInput" type="text" placeholder="Digite o código">
+      <button id="loadGTM">Carregar</button>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://cdn.motor1.com/images/mgl/2NAWog/s3/1998-subaru-impreza-sti-22b-formerly-owned-by-colin-mcrae.jpg"
+      alt="Produto 4">
+    <h2>Impreza</h2>
+    <p class="price">R$ 20.000,00</p>
+    <p>Conheça o Subaru Impreza, um sinônimo de confiabilidade e inovação. Equipada com motor Boxer 2.0L de 152 cv e
+      transmissão CVT, proporciona uma performance suave e eficiente. O sistema de tração integral Symmetrical AWD
+      oferece estabilidade e controle inigualáveis. Com recursos como controle de clima automático, assentos em tecido
+      premium e tecnologia EyeSight Driver Assist, o Impreza garante conforto e segurança. Seu design moderno e
+      versátil, disponível em várias cores, faz do Impreza a escolha ideal para quem busca praticidade sem abrir mão de
+      estilo.</p>
+      <div class="buttons">
+        <button class="add-to-cart-button"
+            onclick="dlEvent({event: events.addToCart, itemProperties: carModels.impreza})">
+            Adicionar ao Carrinho
+        </button>
+    </div>
+  </div>
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="footer-container">
+        <span>© 2025 Guilda Agnalytics. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

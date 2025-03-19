@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agnalytics Car Shop</title>
+  <base href="/frente-onboarding-ts/agnalytics/">
+  <!-- dlEvents script-->
+  <script src="/scripts/dlEvents.js"></script>
+  <!-- End dlEvents script-->
+  <script src="/scripts/gtmInset.js"></script>
+  <link rel="stylesheet" href="/css/product.css">
+
+</head>
+
+<body onload="dlEvent({event: events.viewProduct, itemProperties: carModels.charger})">
+  <!--MENU-->
+  <div class="menu">
+    <div class="logo">
+      <img src="/assets/logo.png" alt="Logo">
+      <a href="/index.html">
+        <span>Agnalytics Car Shop</span>
+      </a>
+    </div>
+    <div>
+      <a href="/categoryPages/compacto.html">Compacto</a>
+      <a href="/categoryPages/esportivo.html">Esportivo</a>
+      <a href="/categoryPages/sedan.html">Sedan</a>
+      <a href="/cart.html" >Carrinho</a>
+    </div>
+    <div class="input-container">
+      <input id="gtmInput" type="text" placeholder="Digite o código">
+      <button id="loadGTM">Carregar</button>
+    </div>
+  </div>
+  <div class="product-card">
+    <img
+      src="https://fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com/uploads/2018/02/16155242/1969-dodge-charger-bullitt.jpg"
+      alt="Produto 6">
+    <h2>Dodge Charger</h2>
+    <p class="price">R$ 35.000,00</p>
+    <p>Descubra o Dodge Charger, uma lenda de potência e estilo. Equipado com motor HEMI V8 de até 485 cv e transmissão
+      automática de 8 velocidades, entrega uma performance brutal. Com tração traseira, controle de clima automático,
+      assentos em couro perfurado e sistema Uconnect com Apple CarPlay e Android Auto, garante conforto e conectividade.
+      O Charger integra avançadas tecnologias de segurança, incluindo alerta de colisão e assistência de manutenção de
+      faixa. Seu design agressivo e musculoso, disponível em diversas cores, faz do Charger a escolha ideal para quem
+      deseja dominar a estrada com autoridade e carisma.</p>
+      <div class="buttons">
+        <button class="add-to-cart-button"
+            onclick="dlEvent({event: events.addToCart, itemProperties: carModels.charger})">
+            Adicionar ao Carrinho
+        </button>
+    </div>
+  </div>
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="footer-container">
+        <span>© 2025 Guilda Agnalytics. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agnalytics Car Shop</title>
+  <!-- dlEvents script-->
+  <script src="/scripts/dlEvents.js"></script>
+  <!-- End dlEvents script-->
+  <script src="/scripts/gtmInset.js"></script>
+  <link rel="stylesheet" href="/css/product.css" />
+</head>
+
+<body onload="dlEvent({event: events.viewProduct, itemProperties: carModels.mx5})">
+  <!--MENU-->
+  <div class="menu">
+    <div class="logo">
+      <img src="/assets/logo.png" alt="Logo" />
+      <a href="/index.html">
+        <span>Agnalytics Car Shop</span>
+      </a>
+    </div>
+    <div>
+      <a href="/categoryPages/compacto.html">Compacto</a>
+      <a href="/categoryPages/esportivo.html">Esportivo</a>
+      <a href="/categoryPages/sedan.html">Sedan</a>
+      <a href="/cart.html">Carrinho</a>
+    </div>
+    <div class="input-container">
+      <input id="gtmInput" type="text" placeholder="Digite o código" />
+      <button id="loadGTM">Carregar</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://s3.us-east-2.amazonaws.com/prod.mm.com/img/articles/Lead1_VHaUGFh.jpeg" alt="Produto 3" />
+    <h2>MX-5</h2>
+    <p class="price">R$ 25.000,00</p>
+    <p>
+      Descubra o Mazda MX-5, um ícone de elegância e performance com motor
+      2.0L Skyactiv-G de 181 cv, transmissão manual de 6 velocidades e tração
+      traseira. Equipado com ar-condicionado automático, assentos de couro
+      aquecidos e avançados sistemas de assistência ao motorista, ele oferece
+      conforto e segurança. Com design arrojado e aerodinâmico, disponível em
+      diversas cores, o MX-5 transforma cada viagem em uma experiência
+      emocionante.
+    </p>
+    <div class="buttons">
+      <button class="add-to-cart-button"
+          onclick="dlEvent({event: events.addToCart, itemProperties: carModels.mx5})">
+          Adicionar ao Carrinho
+      </button>
+  </div>
+  </div>
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="footer-container">
+      <span>© 2025 Guilda Agnalytics. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

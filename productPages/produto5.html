@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agnalytics Car Shop</title>
+  <base href="/frente-onboarding-ts/agnalytics/">
+  <!-- dlEvents script-->
+  <script src="/scripts/dlEvents.js"></script>
+  <!-- End dlEvents script-->
+  <script src="/scripts/gtmInset.js"></script>
+  <link rel="stylesheet" href="/css/product.css">
+
+</head>
+
+<body onload="dlEvent({event: events.viewProduct, itemProperties: carModels.fusion})">
+ 
+  <!--MENU-->
+  <div class="menu">
+    <div class="logo">
+      <img src="/assets/logo.png" alt="Logo">
+      <a href="/index.html">
+        <span>Agnalytics Car Shop</span>
+      </a>
+    </div>
+    <div>
+      <a href="/categoryPages/compacto.html">Compacto</a>
+      <a href="/categoryPages/esportivo.html">Esportivo</a>
+      <a href="/categoryPages/sedan.html">Sedan</a>
+      <a href="/cart.html" >Carrinho</a>
+    </div>
+    <div class="input-container">
+      <input id="gtmInput" type="text" placeholder="Digite o código">
+      <button id="loadGTM">Carregar</button>
+    </div>
+  </div>
+  
+  <div class="product-card">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/d/d8/2006_Ford_Fusion_--_NHTSA.jpg"
+      alt="Produto 5">
+    <h2>Fusion</h2>
+    <p class="price">R$ 28.000,00</p>
+    <p>Descubra o Ford Fusion, onde elegância encontra tecnologia. Com motor 2.0L EcoBoost de 245 cv e transmissão
+      automática de 6 velocidades, oferece uma direção potente e eficiente. Equipado com tração dianteira, controle de
+      clima automático, bancos de couro aquecidos e sistema SYNC 3 com Apple CarPlay e Android Auto, garante conforto e
+      conectividade. O Fusion incorpora avançadas assistências ao motorista, como monitoramento de ponto cego e
+      assistência de pré-colisão. Seu design sofisticado e contemporâneo, disponível em diversas cores, faz do Fusion a
+      opção perfeita para quem busca luxo e desempenho.</p>
+      <div class="buttons">
+        <button class="add-to-cart-button"
+            onclick="dlEvent({event: events.addToCart, itemProperties: carModels.fusion})">
+            Adicionar ao Carrinho
+        </button>
+    </div>
+  </div>
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="footer-container">
+        <span>© 2025 Guilda Agnalytics. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agnalytics Car Shop</title>
+    <!-- dlEvents script-->
+    <script src="/scripts/dlEvents.js"></script>
+    <!-- End dlEvents script-->
+    <script src="/scripts/gtmInset.js"></script>
+
+    <link rel="stylesheet" href="/css/product.css" />
+</head>
+
+<body onload="dlEvent({event: events.viewProduct, itemProperties: carModels.p206})">
+    <!--MENU-->
+    <div class="menu">
+        <div class="logo">
+            <img src="/assets/logo.png" alt="Logo" />
+            <a href="/index.html">
+                <span>Agnalytics Car Shop</span>
+            </a>
+        </div>
+        <div>
+            <a href="/categoryPages/compacto.html">Compacto</a>
+            <a href="/categoryPages/esportivo.html">Esportivo</a>
+            <a href="/categoryPages/sedan.html">Sedan</a>
+            <a href="/cart.html">Carrinho</a>
+        </div>
+        <div class="input-container">
+            <input id="gtmInput" type="text" placeholder="Digite o código" />
+            <button id="loadGTM">Carregar</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://cdn.motor1.com/images/mgl/j4zV6/s3/peugeot-206-20-anos.webp" alt="Produto 1" />
+        <h2>206</h2>
+        <p class="price">R$ 18.000,00</p>
+        <p>
+            Sob o capô, o Peugeot 206 possui uma variedade de opções de motorização,
+            oferecendo desempenho eficiente e econômico. Com uma suspensão bem
+            ajustada, o carro proporciona uma direção suave, estável e ágil,
+            tornando-o adequado para o dia a dia na cidade e também para viagens
+            mais longas.
+        </p>
+        <div class="buttons">
+            <button class="add-to-cart-button"
+                onclick="dlEvent({event: events.addToCart, itemProperties: carModels.p206})">
+                Adicionar ao Carrinho
+            </button>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <span>© 2025 Guilda Agnalytics. All rights reserved.</span>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
