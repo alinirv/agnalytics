@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agnalytics Car Shop</title>
+    <!-- dlEvents script-->
+    <script src="/scripts/dlEvents.js"></script>
+    <!-- End dlEvents script-->
+    <script src="/scripts/gtmInset.js"></script>
+    <link rel="stylesheet" href="/css/styly.css">
+</head>
+
+<body onload="dlEvent({event: events.viewProductList, listProperties: {listName: productLists.esportivo}})">
+    <!--MENU-->
+    <div class="menu">
+        <div class="logo">
+            <img src="/assets/logo.png" alt="Logo">
+            <a href="/index.html">
+                <span>Agnalytics Car Shop</span>
+            </a>
+        </div>
+        <div>
+            <a href="compacto.html">Compacto</a>
+            <a href="esportivo.html">Esportivo</a>
+            <a href="sedan.html">Sedan</a>
+            <a href="/cart.html" >Carrinho</a>
+        </div>
+        <div class="input-container">
+            <input id="gtmInput" type="text" placeholder="Digite o código">
+            <button id="loadGTM">Carregar</button>
+        </div>
+    </div>
+    <!--BANNER-->
+    <div class="banner-container">
+        <div class="banner-esportivo"></div>
+    </div>
+
+
+    <a href="/productPages/produto3.html" class="product-card">
+        <img src="https://s3.us-east-2.amazonaws.com/prod.mm.com/img/articles/Lead1_VHaUGFh.jpeg" alt="MX-5">
+        <h2>MX-5</h2>
+        <span>Preço: R$25.000</span>
+        <p>Mazda MX-5 Miata, roadster esportivo ágil com design clássico conversível.</p>
+        <button
+            onclick="dlEvent({event: events.clickProductList, listProperties: {listName: productLists.esportivo, index: 1}, itemProperties: carModels.mx5})">Ver
+            Produto</button>
+    </a>
+    <a href="/productPages/produto4.html" class="product-card">
+        <img src="https://cdn.motor1.com/images/mgl/2NAWog/s3/1998-subaru-impreza-sti-22b-formerly-owned-by-colin-mcrae.jpg"
+            alt="Impreza">
+        <h2>Impreza</h2>
+        <span>Preço: R$20.000</span>
+        <p>Compacto da Subaru, disponível em sedã e hatchback, conhecido pelo desempenho.</p>
+        <button
+            onclick="dlEvent({event: events.clickProductList, listProperties: {listName: productLists.esportivo, index: 2}, itemProperties: carModels.impreza})">Ver
+            Produto</button>
+    </a>
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <span>© 2025 Guilda Agnalytics. All rights reserved.</span>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
