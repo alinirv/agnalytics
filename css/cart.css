@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.menu {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.menu .input-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu .input-container input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.cart-container {
+  max-width: 900px;
+  margin: 20px 40px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.cart-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.cart-item p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item button {
+  padding: 5px 10px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: #ff6347;
+}
+
+.cart-summary {
+  margin-top: 20px;
+}
+
+.cart-summary h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cart-summary p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.checkout-button {
+  padding: 5px 10px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.checkout-button:hover {
+  background-color: #ff6347;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
