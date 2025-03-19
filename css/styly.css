@@ -1,0 +1,251 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.menu .logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu .logo img {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%; /* Torna a imagem circular */
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ff6347;
+}
+
+.menu .input-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.menu button {
+  padding: 5px 10px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background-color: #ff6347;
+}
+
+.banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px; 
+}
+
+.banner {
+  width: 100%;
+  height: 450px; /* Ajuste a altura conforme necessário */
+  background: url("https://www.hojeemdia.com.br/image/policy:1.787953.1628830062:1628830062/image.jpg?w=1280&") no-repeat center;
+  background-size: cover;
+  /* Adiciona espaço para o menu fixo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.banner-compact {
+  width: 100%;
+  height: 450px; /* Ajuste a altura conforme necessário */
+  background: url("https://blog.olhonocarro.com.br/wp-content/uploads/2023/06/vw-gol-g2-azul-traseira.jpg") no-repeat center;
+  background-size: cover;
+  /* Adiciona espaço para o menu fixo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.banner-sedan{
+  width: 100%;
+  height: 450px; /* Ajuste a altura conforme necessário */
+  background: url("https://upload.wikimedia.org/wikipedia/commons/d/d8/2006_Ford_Fusion_--_NHTSA.jpg") no-repeat center;
+  background-size: cover;
+  /* Adiciona espaço para o menu fixo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.banner-esportivo{
+  width: 100%;
+  height: 450px; /* Ajuste a altura conforme necessário */
+  background: url("https://s3.us-east-2.amazonaws.com/prod.mm.com/img/articles/Lead1_VHaUGFh.jpeg") no-repeat center;
+  background-size: cover;
+  /* Adiciona espaço para o menu fixo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.banner h2 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.featured-products {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.featured-products h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  margin: 20px;
+  padding: 10px;
+  display: inline-block;
+  width: calc(100% - 40px); /* Ajusta a largura para caber dentro da margem */
+  max-width: 280px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.product-card h2,
+.product-card p,
+.product-card span {
+  margin: 10px 0;
+}
+
+.product-card button {
+  padding: 5px 10px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #ff6347;
+}
+
+/* Estilos do Footer */
+.footer {
+  background: #333;
+  color: #ffffff;
+  padding: 20px 0;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Links do Footer */
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff6600;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-top: 10px;
+  }
+}
+
+/* Remover efeito de link */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}

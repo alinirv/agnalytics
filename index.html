@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agnalytics Car Shop</title>
+  <!-- dlEvents script-->
+  <script src="scripts/dlEvents.js"></script>
+  <!-- End dlEvents script-->
+  <script src="scripts/gtmInset.js"></script>
+  <link rel="stylesheet" href="css/styly.css">
+</head>
+
+<body onload="loadHomeEvents()">
+  <!--MENU-->
+  <div class="menu">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo">
+      <a href="index.html">
+        <span>Agnalytics Car Shop</span>
+      </a>
+    </div>
+    <div>
+      <a href="categoryPages/compacto.html">Compacto</a>
+      <a href="categoryPages/esportivo.html">Esportivo</a>
+      <a href="categoryPages/sedan.html">Sedan</a>
+      <a href="cart.html" >Carrinho</a>
+    </div>
+    <div class="input-container">
+      <input id="gtmInput" type="text" placeholder="Digite o código">
+      <button id="loadGTM">Carregar</button>
+    </div>
+  </div>
+  <!--BANNER-->
+  <div class="banner-container">
+    <a href="categoryPages/esportivo.html"
+      onclick="dlEvent({event: events.clickBanner, bannerProperties: bannersData.home})">
+      <div class="banner">
+        <div class="banner-content">
+          <h2>Encontre o carro dos seus sonhos!</h2>
+          <p>Os melhores modelos com preços imbatíveis. Escolha o seu agora!</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!--PRODUCTS-->
+  <section class="featured-products">
+    <h2>Produtos em Destaque</h2>
+    <div class="products">
+      <a href="productPages/produto1.html" class="product-card"
+        onclick="dlEvent({event: events.clickProductList, listProperties: {listName: productLists.home, index: 1}, itemProperties: carModels.p206})">
+        <img src="https://cdn.motor1.com/images/mgl/j4zV6/s3/peugeot-206-20-anos.webp" alt="Peugeot 206">
+        <h2>Peugeot 206</h2>
+        <span>Preço: R$18.000</span>
+        <p>Compacto e elegante, projetado para uma condução confortável e prazerosa.</p>
+        <button>Ver Produto</button>
+      </a>
+      <a href="productPages/produto2.html" class="product-card"
+        onclick="dlEvent({event: events.clickProductList, listProperties: {listName: productLists.home, index: 2}, itemProperties: carModels.gol})">
+        <img src="https://blog.olhonocarro.com.br/wp-content/uploads/2023/06/vw-gol-g2-azul-traseira.jpg" alt="VW Gol">
+        <h2>VW Gol</h2>
+        <span>Preço: R$14.000</span>
+        <p>Icônico e compacto, destacando-se pela confiabilidade e versatilidade.</p>
+        <button>Ver Produto</button>
+      </a>
+      <a href="productPages/produto3.html" class="product-card"
+        onclick="dlEvent({event: events.clickProductList, listProperties: {listName: productLists.home, index: 3}, itemProperties: carModels.mx5})">
+        <img src="https://s3.us-east-2.amazonaws.com/prod.mm.com/img/articles/Lead1_VHaUGFh.jpeg" alt="MX-5">
+        <h2>MX-5</h2>
+        <span>Preço: R$25.000</span>
+        <p>Mazda MX-5 Miata, roadster esportivo ágil com design clássico conversível.</p>
+        <button>Ver Produto</button>
+      </a>
+      <a href="productPages/produto4.html" class="product-card"
+        onclick="dlEvent({event: events.clickProductList, listProperties: {listName: productLists.home, index: 4}, itemProperties: carModels.impreza})">
+        <img
+          src="https://cdn.motor1.com/images/mgl/2NAWog/s3/1998-subaru-impreza-sti-22b-formerly-owned-by-colin-mcrae.jpg"
+          alt="Impreza">
+        <h2>Impreza</h2>
+        <span>Preço: R$20.000</span>
+        <p>Compacto da Subaru, disponível em sedã e hatchback, conhecido pelo desempenho.</p>
+        <button>Ver Produto</button>
+      </a>
+      <a href="productPages/produto5.html" class="product-card"
+        onclick="dlEvent({event: events.clickProductList, listProperties: {listName: productLists.home, index: 5}, itemProperties: carModels.fusion})">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/2006_Ford_Fusion_--_NHTSA.jpg" alt="Fusion">
+        <h2>Fusion</h2>
+        <span>Preço: R$28.000</span>
+        <p>Sedan médio da Ford com estilo elegante, conforto e tecnologia avançada.</p>
+        <button>Ver Produto</button>
+      </a>
+      <a href="productPages/produto6.html" class="product-card"
+        onclick="dlEvent({event: events.clickProductList, listProperties: {listName: productLists.home, index: 6}, itemProperties: carModels.charger})">
+        <img
+          src="https://fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com/uploads/2018/02/16155242/1969-dodge-charger-bullitt.jpg"
+          alt="Dodge Charger">
+        <h2>Dodge Charger</h2>
+        <span>Preço: R$35.000</span>
+        <p>Sedan esportivo de tamanho grande com estilo agressivo e desempenho poderoso.</p>
+        <button>Ver Produto</button>
+      </a>
+    </div>
+  </section>
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="footer-container">
+      <span>© 2025 Guilda Agnalytics. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
