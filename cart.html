@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Agnalytics Car Shop</title>
+    <!-- dlEvents script-->
+    <script src="/scripts/dlEvents.js"></script>
+    <!-- End dlEvents script-->
+    <script src="/scripts/gtmInset.js"></script>
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body onload="dlEvent({event: events.viewCart})">
+    <!--MENU-->
+    <div class="menu">
+        <div class="logo">
+            <img src="/assets/logo.png" alt="Logo">
+            <a href="/index.html">
+                <span>Agnalytics Car Shop</span>
+            </a>
+        </div>
+        <div>
+            <a href="/categoryPages/compacto.html">Compacto</a>
+            <a href="/categoryPages/esportivo.html">Esportivo</a>
+            <a href="/categoryPages/sedan.html">Sedan</a>
+            
+        </div>
+        <div class="input-container">
+            <input id="gtmInput" type="text" placeholder="Digite o código">
+            <button id="loadGTM">Carregar</button>
+        </div>
+    </div>
+
+    <!--CARRINHO-->
+    <div class="cart-container">
+        <h1>Carrinho de Compras</h1>
+        <div id="cartItems">
+            <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
+        </div>
+        <div class="cart-summary">
+            <h2>Resumo do Pedido</h2>
+            <p id="totalPrice">Total: R$ 0,00</p>
+            <a href="/checkout.html" class="checkout-button">Ir para o Checkout</a>
+            <a href="/index.html" class="checkout-button">Continuar comprando</a>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <span>© 2025 Guilda Agnalytics. All rights reserved.</span>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // carrega os itens do carrinho
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartItems = document.getElementById("cartItems");
+            const totalPrice = document.getElementById("totalPrice");
+
+            const cart = JSON.parse(sessionStorage.getItem("pixelCart")) || [];
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = "<p>Seu carrinho está vazio.</p>";
+            } else {
+                let total = 0;
+                cart.forEach(item => {
+                    const itemElement = document.createElement("div");
+                    itemElement.className = "cart-item";
+                    itemElement.innerHTML = `
+                        <div>
+                            <h2>${item.product_brand}</h2>
+                            <p>Preço: R$ ${item.product_price}</p>
+                            <button onclick="removeFromCart('${item.product_id}')">Remover</button>
+                        </div>
+                    `;
+                    cartItems.appendChild(itemElement);
+                    total += item.product_price;
+                });
+                totalPrice.textContent = `Total: R$ ${total.toFixed(2)}`;
+            }
+        });
+        //remove item do carrinho
+        function removeFromCart(productId) {
+            let cart = JSON.parse(sessionStorage.getItem("pixelCart")) || [];
+            const item = cart.find(item => item.product_id === productId);
+            if (item) {
+                dlEvent({ event: events.removeCart, itemProperties: item });
+                location.reload();
+            }
+        }
+    </script>
+</body>
+
+</html>
